@@ -1,25 +1,92 @@
-const S=[
-["ഇന്ത്യൻ സ്വാതന്ത്ര്യസമരം",5,"🏛️","സ്വാതന്ത്ര്യസമര കാലഘട്ടത്തിലെ രാഷ്ട്രീയ, സാമൂഹിക, സാംസ്കാരിക മുന്നേറ്റങ്ങളും ദേശീയ പ്രസ്ഥാനങ്ങളും.",["രാഷ്ട്രീയ മുന്നേറ്റങ്ങൾ","സാമൂഹിക മുന്നേറ്റങ്ങൾ","സാംസ്കാരിക മുന്നേറ്റങ്ങൾ","ദേശീയ പ്രസ്ഥാനങ്ങൾ","സ്വാതന്ത്ര്യസമര സേനാനികൾ","ഭരണസംവിധാനങ്ങൾ"]],
-["സ്വാതന്ത്ര്യാനന്തര ഇന്ത്യ",5,"🇮🇳","സ്വാതന്ത്ര്യാനന്തര ഇന്ത്യ നേരിട്ട പ്രധാന വെല്ലുവിളികളും യുദ്ധങ്ങളും വികസന നേട്ടങ്ങളും.",["സ്വാതന്ത്ര്യാനന്തര ഇന്ത്യ നേരിട്ട പ്രധാന വെല്ലുവിളികൾ","ഇന്ത്യ നേരിട്ട പ്രധാന യുദ്ധങ്ങൾ","പഞ്ചവത്സര പദ്ധതികൾ","വിവിധ മേഖലകളിലെ പുരോഗതികൾ","ദേശീയ നേട്ടങ്ങളും വികസനവും"]],
-["ഇന്ത്യൻ ഭരണഘടന & പൗരാവകാശങ്ങൾ",5,"⚖️","ഒരു പൗരന്റെ അവകാശങ്ങളും കടമകളും ഇന്ത്യൻ ഭരണഘടനയുടെ അടിസ്ഥാന വിവരങ്ങളും.",["ഒരു പൗരന്റെ അവകാശങ്ങൾ","ഒരു പൗരന്റെ കടമകൾ","ഇന്ത്യൻ ഭരണഘടന — അടിസ്ഥാന വിവരങ്ങൾ","ഭരണഘടനയുടെ ആമുഖം","മൗലികാവകാശങ്ങൾ","മൗലിക കടമകൾ"]],
-["ഇന്ത്യൻ ഭൂമിശാസ്ത്രം",5,"🗺️","ഇന്ത്യയുടെ ഭൂമിശാസ്ത്രപരമായ സവിശേഷതകൾ, അതിർത്തികൾ, അടിസ്ഥാന വിവരങ്ങൾ.",["ഇന്ത്യയുടെ അടിസ്ഥാന വിവരങ്ങൾ","ഭൂമിശാസ്ത്രപരമായ സവിശേഷതകൾ","ഇന്ത്യയുടെ അതിർത്തികൾ","സംസ്ഥാനങ്ങളും കേന്ദ്രഭരണ പ്രദേശങ്ങളും","പർവതനിരകൾ","നദികളും ജലവിഭവങ്ങളും","സമതലങ്ങളും പീഠഭൂമികളും","കാലാവസ്ഥയും മണ്ണിനങ്ങളും"]],
-["കേരളം",10,"🌴","കേരളത്തിന്റെ ഭൂമിശാസ്ത്രം, അടിസ്ഥാന വിവരങ്ങൾ, നദികൾ, കായലുകൾ, വൈദ്യുത പദ്ധതികൾ തുടങ്ങിയവ.",["കേരളത്തിന്റെ അടിസ്ഥാന വിവരങ്ങൾ","കേരളത്തിന്റെ ഭൂമിശാസ്ത്രം","നദികൾ","കായലുകൾ","വിവിധ വൈദ്യുത പദ്ധതികൾ","വന്യജീവി സങ്കേതങ്ങൾ","ദേശീയോദ്യാനങ്ങൾ","മത്സ്യബന്ധനം","കായികരംഗം","തദ്ദേശസ്വയംഭരണ സ്ഥാപനങ്ങൾ"]],
-["കേരളത്തിലെ സ്വാതന്ത്ര്യസമരവും നവോത്ഥാനവും",5,"✊","കേരളത്തിലെ സ്വാതന്ത്ര്യസമരവുമായി ബന്ധപ്പെട്ട രാഷ്ട്രീയ, സാമൂഹിക മുന്നേറ്റങ്ങളും നവോത്ഥാന നായകരും.",["കേരളത്തിലെ സ്വാതന്ത്ര്യസമര പ്രസ്ഥാനങ്ങൾ","രാഷ്ട്രീയ മുന്നേറ്റങ്ങൾ","സാമൂഹിക മുന്നേറ്റങ്ങൾ","നവോത്ഥാന പ്രസ്ഥാനങ്ങൾ","നവോത്ഥാന നായകർ","പ്രധാന സംഘടനകളും സമരങ്ങളും"]],
-["പൊതുവിജ്ഞാനം",5,"🎭","ശാസ്ത്ര സാങ്കേതികം, കലാ-സാംസ്കാരികം, രാഷ്ട്രീയം, സമ്പദ്‌വ്യവസ്ഥ, സാഹിത്യം, കായികം.",["ശാസ്ത്ര-സാങ്കേതിക മേഖല","കലാ-സാംസ്കാരിക മേഖല","രാഷ്ട്രീയ മേഖല","സാമ്പത്തിക മേഖല","സാഹിത്യ മേഖല","കായിക മേഖല"]],
-["ആനുകാലിക വിഷയങ്ങൾ",20,"📰","ദേശീയ, അന്തർദേശീയ, കേരളം, ശാസ്ത്രം, കായികം, പുരസ്കാരങ്ങൾ തുടങ്ങിയ സമകാലിക വിഷയങ്ങൾ.",["കേരളത്തിലെ ആനുകാലിക സംഭവങ്ങൾ","ഇന്ത്യയിലെ ആനുകാലിക സംഭവങ്ങൾ","അന്തർദേശീയ സംഭവങ്ങൾ","ശാസ്ത്ര സാങ്കേതിക വാർത്തകൾ","കായികം","പുരസ്കാരങ്ങൾ","സർക്കാർ പദ്ധതികളും നിയമനങ്ങളും","പ്രധാന റിപ്പോർട്ടുകളും സൂചികകളും","പ്രധാന ദിനങ്ങൾ"]],
-["ജീവശാസ്ത്രം",5,"🧬","മനുഷ്യശരീരം, ജീവകങ്ങൾ, ഭക്ഷ്യ-കാർഷിക വിളകൾ, വനങ്ങൾ, പരിസ്ഥിതി.",["മനുഷ്യശരീരത്തെക്കുറിച്ചുള്ള പൊതുവിജ്ഞാനം","ജീവകങ്ങളും അപര്യാപ്തതാ രോഗങ്ങളും","കേരളത്തിലെ പ്രധാന ഭക്ഷ്യ, കാർഷിക വിളകൾ","വനങ്ങൾ, വനവിഭവങ്ങൾ, സാമൂഹിക വനവത്കരണം","പരിസ്ഥിതിയും പരിസ്ഥിതി പ്രശ്നങ്ങളും"]],
-["ഭൗതികശാസ്ത്രം / രസതന്ത്രം",5,"⚛️","ആറ്റം മുതൽ സൗരയൂഥം വരെ ഭൗതികശാസ്ത്രവും രസതന്ത്രവും.",["ആറ്റവും ആറ്റത്തിന്റെ ഘടനയും","അയിരുകളും ധാതുക്കളും","മൂലകങ്ങളും അവയുടെ വർഗ്ഗീകരണവും","ഹൈഡ്രജനും ഓക്സിജനും","രസതന്ത്രം ദൈനംദിന ജീവിതത്തിൽ","ദ്രവ്യവും പിണ്ഡവും","പ്രവൃത്തിയും ഊർജ്ജവും","ഊർജ്ജവും അതിന്റെ പരിവർത്തനവും","താപവും ഊഷ്മാവും","പ്രകൃതിയിലെ ചലനങ്ങളും ബലങ്ങളും","ശബ്ദവും പ്രകാശവും","സൗരയൂഥവും സവിശേഷതകളും"]],
-["പൊതുജനാരോഗ്യം",10,"🏥","സാംക്രമിക രോഗങ്ങൾ, അടിസ്ഥാന ആരോഗ്യ വിജ്ഞാനം, ജീവിതശൈലി രോഗങ്ങൾ, കേരളത്തിലെ ആരോഗ്യ പ്രവർത്തനങ്ങൾ.",["സാംക്രമിക രോഗങ്ങളും രോഗകാരികളും","അടിസ്ഥാന ആരോഗ്യ വിജ്ഞാനം","ജീവിതശൈലി രോഗങ്ങൾ","കേരളത്തിലെ ആരോഗ്യക്ഷേമ പ്രവർത്തനങ്ങൾ"]],
-["ലഘുഗണിതം",10,"➗","PSC പരീക്ഷയ്ക്ക് ആവശ്യമായ അടിസ്ഥാന ഗണിത ആശയങ്ങളും പ്രശ്നപരിഹാര രീതികളും.",["സംഖ്യകളും അടിസ്ഥാന ക്രിയകളും","ലസാഗു, ഉസാഘ","ഭിന്നസംഖ്യകൾ","ദശാംശ സംഖ്യകൾ","വർഗ്ഗവും വർഗ്ഗമൂലവും","ശരാശരി","ലാഭവും നഷ്ടവും","സമയവും ദൂരവും"]],
-["മാനസികശേഷി & നിരീക്ഷണപാടവം",10,"🧠","മാനസികശേഷി, ശ്രേണികൾ, സമാനബന്ധങ്ങൾ, തരംതിരിക്കൽ, സ്ഥാനനിർണ്ണയം.",["ഗണിത ചിഹ്നങ്ങൾ ഉപയോഗിച്ചുള്ള ക്രിയകൾ","ശ്രേണികൾ","സമാനബന്ധങ്ങൾ","തരംതിരിക്കൽ","അർത്ഥവത്തായ രീതിയിൽ പദങ്ങളുടെ ക്രമീകരണം","ഒറ്റയാനെ കണ്ടെത്തൽ","വയസുമായി ബന്ധപ്പെട്ട പ്രശ്നങ്ങൾ","സ്ഥാന നിർണ്ണയം"]]
+const subjects = [
+  ["ഇന്ത്യൻ ചരിത്രം", "🏛️"],
+  ["കേരള ചരിത്രം", "🌴"],
+  ["ഭരണഘടന", "⚖️"],
+  ["ഇന്ത്യൻ ഭൂമിശാസ്ത്രം", "🗺️"],
+  ["കേരള ഭൂമിശാസ്ത്രം", "📍"],
+  ["Economics", "💹"],
+  ["ബയോളജി", "🧬"],
+  ["കെമിസ്ട്രി", "⚗️"],
+  ["ഫിസിക്സ്", "⚛️"],
+  ["ആനുകാലികം", "📰"],
+  ["മലയാളം", "🔤"],
+  ["English", "📖"]
 ];
-let C=JSON.parse(localStorage.getItem("wikiPSC_topics")||"[]");
-const key=(s,t)=>s+"-"+t, has=(s,t)=>C.includes(key(s,t));
-function st(i){let n=S[i][4].length,c=S[i][4].filter((_,t)=>has(i,t)).length;return[n,c,n?Math.round(c/n*100):0]}
-function all(){let n=0,c=0;S.forEach((_,i)=>{let x=st(i);n+=x[0];c+=x[1]});return[n,c,n?Math.round(c/n*100):0]}
-function render(){cards.innerHTML=S.map((s,i)=>{let x=st(i);return `<article class="card ${x[2]==100?"complete":""}" onclick="detail(${i})"><div class="icon">${s[2]}</div><h3>${s[0]}</h3><small>${s[1]} മാർക്ക്</small><div class="meta"><span>${x[1]}/${x[0]} പൂർത്തിയായി</span><div class="mini"><i style="width:${x[2]}%"></i></div></div></article>`}).join("");plist.innerHTML=S.map((s,i)=>{let x=st(i);return `<div class="prow"><div class="prowtop"><span>${s[2]} ${s[0]}</span><span>${x[2]}%</span></div><div class="mini" style="margin:10px 0"><i style="width:${x[2]}%"></i></div><small>${x[1]} / ${x[0]} ഉപവിഷയങ്ങൾ · ${s[1]} മാർക്ക്</small></div>`}).join("");let a=all();pct.textContent=a[2]+"%";bar.style.width=a[2]+"%";done.textContent=a[1];total.textContent=a[0];badge.textContent=S.filter((_,i)=>st(i)[2]==100).length+" / 13"}
-function detail(i){let s=S[i],x=st(i);homeView.classList.add("hidden");detail.classList.remove("hidden");dlabel.textContent=s[1]+" മാർക്ക് · "+s[2];dtitle.textContent=s[0];ddesc.textContent=s[3];dpct.textContent=x[2]+"%";dcount.textContent=x[1]+" / "+x[0]+" പൂർത്തിയായി";dbar.style.width=x[2]+"%";topics.innerHTML=s[4].map((t,j)=>`<label class="topic ${has(i,j)?"done":""}"><input type="checkbox" ${has(i,j)?"checked":""} onchange="toggle(${i},${j},this.checked)"><div><b>${t}</b><small>${has(i,j)?"പൂർത്തിയായി ✓":"പഠിക്കാൻ ബാക്കി"}</small></div></label>`).join("");scrollTo(0,0)}
-function toggle(i,j,v){let k=key(i,j),p=C.indexOf(k);if(v&&p<0)C.push(k);if(!v&&p>=0)C.splice(p,1);localStorage.setItem("wikiPSC_topics",JSON.stringify(C));detail(i);render()}
-function home(){detail.classList.add("hidden");homeView.classList.remove("hidden");render()}
-reset.onclick=()=>{if(confirm("എല്ലാ progress-ഉം reset ചെയ്യണോ?")){C=[];localStorage.removeItem("wikiPSC_topics");render()}}
-theme.onclick=()=>{document.body.classList.toggle("dark");let d=document.body.classList.contains("dark");localStorage.setItem("wikiPSC_theme",d?"dark":"light");theme.textContent=d?"☀":"☾"};if(localStorage.getItem("wikiPSC_theme")=="dark"){document.body.classList.add("dark");theme.textContent="☀"}render();
+
+const KEY = "wikiPSC_completed";
+const saved = JSON.parse(localStorage.getItem(KEY) || "[]");
+
+function isDone(i) { return saved.includes(i); }
+
+function renderSubjects() {
+  const grid = document.getElementById("subjectGrid");
+  grid.innerHTML = subjects.map((s, i) => `
+    <article class="subject-card ${isDone(i) ? "done" : ""}">
+      <div class="subject-icon">${s[1]}</div>
+      <h3>${s[0]}</h3>
+      <small>${isDone(i) ? "പൂർത്തിയായി ✓" : "പഠിക്കാൻ തയ്യാറാണ്"}</small>
+      <div class="done-mark">✓</div>
+    </article>
+  `).join("");
+}
+
+function renderChecklist() {
+  const list = document.getElementById("checklist");
+  list.innerHTML = subjects.map((s, i) => `
+    <label class="check-item">
+      <input type="checkbox" data-index="${i}" ${isDone(i) ? "checked" : ""}>
+      <span>${s[0]}</span>
+    </label>
+  `).join("");
+
+  list.querySelectorAll("input").forEach(input => {
+    input.addEventListener("change", () => {
+      const i = Number(input.dataset.index);
+      if (input.checked && !saved.includes(i)) saved.push(i);
+      if (!input.checked) {
+        const pos = saved.indexOf(i);
+        if (pos !== -1) saved.splice(pos, 1);
+      }
+      localStorage.setItem(KEY, JSON.stringify(saved));
+      updateProgress();
+      renderSubjects();
+    });
+  });
+}
+
+function updateProgress() {
+  const done = saved.length;
+  const total = subjects.length;
+  const percent = Math.round((done / total) * 100);
+  document.getElementById("progressBar").style.width = `${percent}%`;
+  document.getElementById("progressPercent").textContent = `${percent}%`;
+  document.getElementById("completedCount").textContent = done;
+  document.getElementById("totalCount").textContent = total;
+  document.getElementById("subjectBadge").textContent = `${done} / ${total}`;
+}
+
+document.getElementById("resetBtn").addEventListener("click", () => {
+  if (confirm("എല്ലാ completed subjects-ഉം reset ചെയ്യണോ?")) {
+    saved.length = 0;
+    localStorage.removeItem(KEY);
+    renderChecklist();
+    renderSubjects();
+    updateProgress();
+  }
+});
+
+document.getElementById("themeBtn").addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  document.getElementById("themeBtn").textContent =
+    document.body.classList.contains("dark") ? "☀" : "☾";
+  localStorage.setItem("wikiPSC_theme", document.body.classList.contains("dark") ? "dark" : "light");
+});
+
+if (localStorage.getItem("wikiPSC_theme") === "dark") {
+  document.body.classList.add("dark");
+  document.getElementById("themeBtn").textContent = "☀";
+}
+
+renderSubjects();
+renderChecklist();
+updateProgress();

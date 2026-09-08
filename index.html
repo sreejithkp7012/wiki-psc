@@ -1,20 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ml">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>WiKi PSC | കേരള PSC പഠന സഹായി</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WiKi PSC | കേരള PSC പഠന സഹായി</title>
+  <meta name="description" content="WiKi PSC - കേരള PSC പരീക്ഷകൾക്കായുള്ള മലയാളം പഠന സഹായി">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header><a class="brand" href="#" onclick="home()"><b>W</b><span><strong>WiKi PSC</strong><small>നിങ്ങളുടെ PSC പഠന സഹായി</small></span></a><nav><a href="#subjects">വിഷയങ്ങൾ</a><a href="#progress">പുരോഗതി</a></nav><button id="theme">☾</button></header>
-<main>
-<section id="homeView">
-<section class="hero"><div><label>🎯 PSC Mains Preparation</label><h1>പഠിക്കാം. പൂർത്തിയാക്കാം.<em>Rank ലക്ഷ്യമാക്കാം.</em></h1><p>സിലബസ് അടിസ്ഥാനമാക്കി ഓരോ വിഷയവും ഉപവിഷയങ്ങളായി പഠിക്കുകയും പൂർത്തിയായവ track ചെയ്യുകയും ചെയ്യാം.</p><a class="btn" href="#subjects">പഠനം ആരംഭിക്കാം →</a></div><div class="overall"><div><span>മൊത്തം പഠന പുരോഗതി</span><strong id="pct">0%</strong></div><div class="bar"><i id="bar"></i></div><small><b id="done">0</b> / <b id="total">0</b> ഉപവിഷയങ്ങൾ പൂർത്തിയായി</small></div></section>
-<section class="section" id="subjects"><div class="heading"><div><label>📚 Syllabus</label><h2>വിഷയങ്ങൾ</h2><p>ഒരു വിഷയം തിരഞ്ഞെടുക്കുമ്പോൾ അതിലെ ഉപവിഷയങ്ങൾ കാണാം.</p></div><span id="badge">0 / 13</span></div><div class="cards" id="cards"></div></section>
-<section class="section" id="progress"><div class="heading"><div><label>✅ Progress Tracker</label><h2>പഠന പുരോഗതി</h2><p>ഓരോ ഉപവിഷയവും പൂർത്തിയാക്കുമ്പോൾ progress മാറും.</p></div></div><div class="plist" id="plist"></div><button class="reset" id="reset">↺ എല്ലാ progress-ഉം reset ചെയ്യുക</button></section>
-</section>
-<section id="detail" class="hidden"><button class="back" onclick="home()">← എല്ലാ വിഷയങ്ങളിലേക്കും മടങ്ങുക</button><div class="detailHead"><div><label id="dlabel"></label><h2 id="dtitle"></h2><p id="ddesc"></p></div><div class="dstat"><strong id="dpct">0%</strong><span id="dcount"></span></div></div><div class="bar large"><i id="dbar"></i></div><div class="topics" id="topics"></div></section>
-</main>
-<footer><strong>WiKi PSC</strong> · കേരള PSC പഠന സഹായി</footer>
-<script src="script.js"></script>
-</body></html>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">W</div>
+      <div>
+        <h1>WiKi PSC</h1>
+        <p>നിങ്ങളുടെ PSC പഠന സഹായി</p>
+      </div>
+    </div>
+    <button class="theme-btn" id="themeBtn" aria-label="Theme മാറ്റുക">☾</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow">🎯 PSC Mains Preparation</span>
+        <h2>പഠിക്കാം. പൂർത്തിയാക്കാം.<br><span>Rank ലക്ഷ്യമാക്കാം.</span></h2>
+        <p>നിങ്ങളുടെ PSC പഠനം വിഷയങ്ങൾ, ചെക്ക്‌ലിസ്റ്റ്, റിവിഷൻ എന്നിവയിലൂടെ ലളിതമായി ക്രമീകരിക്കൂ.</p>
+        <a class="primary-btn" href="#subjects">പഠനം ആരംഭിക്കാം →</a>
+      </div>
+      <div class="progress-card">
+        <div class="progress-top">
+          <span>പഠന പുരോഗതി</span>
+          <strong id="progressPercent">0%</strong>
+        </div>
+        <div class="progress-track"><div id="progressBar"></div></div>
+        <p><span id="completedCount">0</span> / <span id="totalCount">12</span> വിഷയങ്ങൾ പൂർത്തിയായി</p>
+      </div>
+    </section>
+
+    <section id="subjects" class="section">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">📚 Subjects</span>
+          <h2>വിഷയങ്ങൾ</h2>
+        </div>
+        <span class="count-badge" id="subjectBadge">0 / 12</span>
+      </div>
+      <div class="subject-grid" id="subjectGrid"></div>
+    </section>
+
+    <section id="checklist" class="section checklist-section">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">✅ Progress Tracker</span>
+          <h2>Completed Subjects Checklist</h2>
+          <p>പഠിച്ചു കഴിഞ്ഞ വിഷയങ്ങളിൽ ✓ അടയാളപ്പെടുത്തൂ. Progress സ്വയം save ചെയ്യും.</p>
+        </div>
+      </div>
+      <div class="checklist" id="checklist"></div>
+      <button class="reset-btn" id="resetBtn">↺ Progress Reset ചെയ്യുക</button>
+    </section>
+  </main>
+
+  <footer>
+    <strong>WiKi PSC</strong> · കേരള PSC പഠന സഹായി
+    <span>നിങ്ങളുടെ പഠനം, നിങ്ങളുടെ progress.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
